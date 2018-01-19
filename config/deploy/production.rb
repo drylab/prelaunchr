@@ -1,18 +1,18 @@
-role :app,        %w(apps02.binarapps.com)
-role :web,        %w(apps02.binarapps.com)
-role :db,         %w(apps02.binarapps.com), primary: true
-set :application, 'create.drylab.io'
+role :app,        %w(web02.drylab.io)
+role :web,        %w(web02.drylab.io)
+role :db,         %w(web02.drylab.io), primary: true
+set :application, 'drylab-prelaunchr'
 
-server 'apps02.binarapps.com', user: fetch(:application), roles: %w(web app db), primary: true
+server 'web02.drylab.io', user: fetch(:application), roles: %w(web app db), primary: true
 
-set :full_app_name, 'create.drylab.io'
+set :full_app_name, 'drylab-prelaunchr'
 set :rails_env,   'production'
-set :branch,      'master'
+set :branch,      'master' # select which branch should be deployed
 set :deploy_to,   "/home/#{fetch(:full_app_name)}/www/"
-set :linked_files, %w(config/database.yml config/unicorn.rb config/config.json)
 
-set :rvm_ruby_version, '2.3.0@dry-prelaunchr'
-set :rvm_map_bins, %w(rake gem bundle ruby rails)
+set :rvm_ruby_version, '2.3.0@dry-prelaunchr'	# put Ruby version and gemset name here
+# set :rvm_type, :system	# uncomment if you need to choose RVM installation manually
+# set :rvm_map_bins, %w(rake gem bundle ruby rails)	# uncomment if you need to specify which commands should be prefixed with RVM
 
 namespace :deploy do
   desc 'Restart application'

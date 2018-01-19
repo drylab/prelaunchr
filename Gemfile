@@ -38,6 +38,9 @@ end
 
 # Deploy with Capistrano
 gem 'capistrano'
+gem 'capistrano-rvm'
+gem 'capistrano-bundler'
+gem 'capistrano-rails'
 
 group :production do
   gem 'rails_12factor'
