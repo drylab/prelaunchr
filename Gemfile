@@ -23,7 +23,8 @@ group :development, :test do
   gem 'rspec-rails', '3.4.2'
   gem 'rspec-mocks', '3.4.1'
   gem 'test-unit', '~> 3.0'
-  gem "dotenv-rails"
+  gem 'dotenv-rails'
+  gem 'letter_opener'
 end
 
 # To use ActiveModel has_secure_password
@@ -36,7 +37,7 @@ end
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
 
 group :production do
   gem 'rails_12factor'

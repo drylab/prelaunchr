@@ -1,8 +1,19 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+  username:
+  password:
+
 development:
-  adapter: postgresql
+  <<: *default
   database: prelaunchr_development
-  host: localhost
+
 test:
-  adapter: postgresql
+  <<: *default
   database: prelaunchr_test
-  host: localhost
+
+production:
+  <<: *default
+  database: prelaunchr_production

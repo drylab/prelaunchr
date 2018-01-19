@@ -68,9 +68,10 @@ class UsersController < ApplicationController
     # Presumably, users are doing this from the same device so block
     # their ip after their ip appears three times in the database.
 
-    address = request.env['HTTP_X_FORWARDED_FOR']
-    return if address.nil?
+    # address = request.env['HTTP_X_FORWARDED_FOR']
+    address = request.env['HTTP_X_FORWARDED_FOR'] || request.env['HTTP_X_REAL_IP'] || request.env['REMOTE_ADDR']
 
+    return if address.nil?
     current_ip = IpAddress.find_by_address(address)
     if current_ip.nil?
       current_ip = IpAddress.create(address: address, count: 1)
