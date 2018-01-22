@@ -1,6 +1,18 @@
 <div class="hero">
-  <p class="large brandon">Harry&#8217;s is live</p>
-  <p class="small brandon">Respecting the Face and Wallet<br>Since Like...Right Now.</p>
+  <div class="flex-cont">
+    <div class="flex-item">
+      <p class="large brandon">Drylab 3 is coming!</p>
+      <div class="small-wrap">
+        <p class="small brandon">Say hello to a new standard.</p>
+        <p class="small brandon">Say good bye to loosing overview</p>
+        <p class="small brandon"> and golden takes.</p>
+      </div>
+      <p class="small brandon">Stay Curious. Create Better.</p>
+    </div>
+    <div class="flex-item">
+      <%=video_tag('landing_page_video.mp4', size: "500x300", autoplay: true, loop: true)%>
+    </div>
+  </div>
 </div>
 
 <div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
