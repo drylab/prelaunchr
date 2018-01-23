@@ -320,6 +320,14 @@ body {
   margin: 0 auto;
 }
 
+#refer .hero .disclaimer {
+  color: #fff;
+  font-size: 11px;
+  position: absolute;
+  right: 10px;
+  bottom: 0px;
+}
+
 #refer .hero .flex-cont {
   display: flex;
   flex-wrap: wrap;
@@ -337,7 +345,7 @@ body {
 #refer .hero .flex-item .title {
   text-align: center;
   font-weight: bold;
-  font-size: 35px;
+  font-size: 30px;
   color: #fff;
   position: relative;
   z-index: 2;
@@ -691,7 +699,7 @@ body {
   }
 
   #refer .hero {
-    min-height: 600px;
+    min-height: 620px;
   }
 
   #refer .hero .share-wrap {
