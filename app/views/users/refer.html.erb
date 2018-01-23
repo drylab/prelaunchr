@@ -45,7 +45,7 @@
   stops.reverse_each { |stop|
     if stop["count"] <= referrals_count
       stop["selected"] = true
-      found = stop
+      found = stop if found == nil
     else
       stop["selected"] = false
     end
