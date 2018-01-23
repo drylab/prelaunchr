@@ -1,4 +1,29 @@
+@import "variables";
 @import "reset";
 @import "bootstrap";
 @import "core";
 @import "users";
+
+@font-face {
+  font-family: "AvantGarde";
+  src: font-url("ITCAvantGardeGothicMedium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "AvantGarde";
+  src: url("ITCAvantGardeGothicMediumOblique.otf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "AvantGarde";
+  src: url("ITCAvantGardeGothicBold.otf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "AvantGarde";
+  src: url("ITCAvantGardeGothicBoldOblique.otf");
+  font-weight: bold;
+  font-style: italic;
+}

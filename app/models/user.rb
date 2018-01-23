@@ -15,32 +15,67 @@ class User < ActiveRecord::Base
 
   REFERRAL_STEPS = [
     {
+      'count' => 0,
+      'html' => 'Beginner',
+      'class' => 'zero',
+      'description' => "Don't be shy, your friends would surely like to know.",
+      'prize' => "$0"
+    },
+    {
       'count' => 5,
-      'html' => '$200',
-      'class' => 'two',
-      # 'image' =>  ActionController::Base.helpers.asset_path(
-      #   'refer/cream-tooltip@2x.png')
+      'html' => 'Junior',
+      'class' => 'one',
+      'description' => "Off to a good start! Keep on going.",
+      'prize' => "$100"
     },
     {
       'count' => 10,
-      'html' => '$200',
+      'html' => 'Employee of the month',
+      'class' => 'two',
+      'description' => "Your mama would be proud.",
+      'prize' => "$200"
+    },
+    {
+      'count' => 15,
+      'html' => 'Expert networker',
       'class' => 'three',
-      # 'image' => ActionController::Base.helpers.asset_path(
-      #   'refer/truman@2x.png')
+      'description' => "Do you really know all of these people?",
+      'prize' => "$300"
+    },
+    {
+      'count' => 20,
+      'html' => 'Honorary Citizen',
+      'class' => 'four',
+      'description' => "Wow! You're on fire!!",
+      'prize' => "$400"
     },
     {
       'count' => 25,
-      'html' => '$200',
-      'class' => 'four',
-      # 'image' => ActionController::Base.helpers.asset_path(
-      #   'refer/winston@2x.png')
+      'html' => 'Super Ninja',
+      'class' => 'five',
+      'description' => "Are you even human?",
+      'prize' => "$500"
     },
     {
-      'count' => 50,
-      'html' => '$200',
-      'class' => 'five',
-      # 'image' => ActionController::Base.helpers.asset_path(
-      #   'refer/blade-explain@2x.png')
+      'count' => 30,
+      'html' => 'Prodigy',
+      'class' => 'six',
+      'description' => "*ERROR* Failed to come up with funny punch.",
+      'prize' => "$600"
+    },
+    {
+      'count' => 35,
+      'html' => 'Emperor of Networking',
+      'class' => 'seven',
+      'description' => "Words are not enough. We bow to you.",
+      'prize' => "$700"
+    },
+    {
+      'count' => 40,
+      'html' => 'Master of the universe',
+      'class' => 'eight',
+      'description' => "Gordon's alive!",
+      'prize' => "$800"
     }
   ]
 
@@ -51,6 +86,6 @@ class User < ActiveRecord::Base
   end
 
   def send_welcome_email
-    UserMailer.delay.signup_email(self)
+    UserMailer.signup_email(self)
   end
 end

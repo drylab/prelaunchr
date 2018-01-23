@@ -18,10 +18,9 @@ class UsersController < ApplicationController
     email = params[:user][:email]
     @user = User.new(email: email)
     @user.referrer = User.find_by_referral_code(ref_code) if ref_code
-
     if @user.save
       cookies[:h_email] = { value: @user.email }
-      redirect_to '/refer-a-friend'
+      redirect_to '/refer-a-friend', notice: 'Thank you for signing up'
     else
       logger.info("Error saving user with email, #{email}")
       redirect_to root_path, alert: 'Something went wrong!'
@@ -68,10 +67,14 @@ class UsersController < ApplicationController
     # Presumably, users are doing this from the same device so block
     # their ip after their ip appears three times in the database.
 
-    # address = request.env['HTTP_X_FORWARDED_FOR']
     address = request.env['HTTP_X_FORWARDED_FOR'] || request.env['HTTP_X_REAL_IP'] || request.env['REMOTE_ADDR']
 
     return if address.nil?
+    geo_data = Geocoder.search(address).first
+    if geo_data.data["country_code"] == "NO"
+      return redirect_to root_path, alert: "Not available in Norway"
+    end
+
     current_ip = IpAddress.find_by_address(address)
     if current_ip.nil?
       current_ip = IpAddress.create(address: address, count: 1)

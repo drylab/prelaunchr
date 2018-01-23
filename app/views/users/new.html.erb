@@ -1,16 +1,28 @@
-<div class="hero">
-  <div class="flex-cont">
-    <div class="flex-item">
-      <p class="large brandon">Drylab 3 is coming!</p>
-      <div class="small-wrap">
-        <p class="small brandon">Say hello to a new standard.</p>
-        <p class="small brandon">Say good bye to loosing overview</p>
-        <p class="small brandon"> and golden takes.</p>
-      </div>
-      <p class="small brandon">Stay Curious. Create Better.</p>
+<% flash.each do |name, msg| %>
+  <% if msg.present? %>
+    <div class="header">
+      <p class="logo brandon">Drylab</p>
+      <%= content_tag :div, msg, class: "byline brandon" %>
     </div>
-    <div class="flex-item">
-      <%=video_tag('landing_page_video.mp4', size: "500x300", autoplay: true, loop: true)%>
+  <% end %>
+<% end %>
+<div class="hero">
+  <div class="row">
+    <div class="flex-cont">
+      <div class="flex-item">
+        <p class="large brandon">Drylab 3 is coming!</p>
+        <div class="small-wrap">
+          <p class="small brandon">Decades of experience, distilled into our completely re-designed software.</p>
+          <p class="small brandon">Built especially for you independent film-makers, with limited resources, yet big visions.</p>
+          <p class="small brandon">No more lost takes or poor overview.</p>
+          <p class="small brandon">Just better creation. Anywhere.</p>
+        </div>
+      </div>
+      <div class="flex-item">
+        <div class="ipad-mock">
+          <%=video_tag('landing_page_video_frameless.mp4', autoplay: true, loop: true, class: "video")%>
+        </div>
+      </div>
     </div>
   </div>
 </div>

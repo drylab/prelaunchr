@@ -1,10 +1,9 @@
 class UserMailer < ActionMailer::Base
-  default from: "Harry's <welcome@harrys.com>"
+  default from: "Drylab <create.drylab.io>"
 
   def signup_email(user)
     @user = user
-    @twitter_message = "#Shaving is evolving. Excited for @harrys to launch."
-
-    mail(:to => user.email, :subject => "Thanks for signing up!")
+    @twitter_message = "#Film-making is evolving. Excited for @drylab 3 to launch."
+    mail(to: user.email, subject: "Thanks for signing up!")
   end
 end

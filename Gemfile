@@ -9,6 +9,7 @@ gem 'pg'
 gem 'rails', '4.2.5.2'
 gem 'unicorn'
 gem 'foreman'
+gem 'geocoder'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -18,13 +19,16 @@ group :assets do
   gem 'uglifier'
 end
 
+group :development do
+  gem 'letter_opener'
+end
+
 group :development, :test do
   gem 'pry'
   gem 'rspec-rails', '3.4.2'
   gem 'rspec-mocks', '3.4.1'
   gem 'test-unit', '~> 3.0'
   gem 'dotenv-rails'
-  gem 'letter_opener'
 end
 
 # To use ActiveModel has_secure_password
