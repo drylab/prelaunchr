@@ -60,7 +60,7 @@ class User < ActiveRecord::Base
       'count' => 30,
       'html' => 'Prodigy',
       'class' => 'six',
-      'description' => "*ERROR* Failed to come up with funny punch.",
+      'description' => "*ERROR* <br> Failed to come up with funny punch.",
       'prize' => "$600"
     },
     {

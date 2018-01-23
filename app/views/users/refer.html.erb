@@ -72,9 +72,9 @@
     <ul class="products clearfix">
       <% stops.each do |stop| %>
         <li class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
-          <div class="circle"><%= stop["count"] %></div>
           <div class="sep"></div>
-          <p><%= stop["html"].html_safe %></p>
+          <div class="circle"><%= stop["count"] %></div>
+          <div class="stop_name"><%= stop["html"].html_safe %></div>
           <div class="description">
             <%= stop["description"].html_safe %>
           </div>
