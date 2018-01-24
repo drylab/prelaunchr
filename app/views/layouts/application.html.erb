@@ -14,13 +14,6 @@
   <meta property="og:image" content="<%= asset_path("home/logo.png") %>"/>
   <meta property="og:url" content="<%= root_url %>"/>
   <meta property="og:description" content="Stay Curious. Create Better."/>
-  <% if @is_mobile %>
-    <% if @bodyId == 'home' %>
-      <meta name="viewport" content="width=1600" />
-    <% else %>
-      <meta name="viewport" content="width=1120" />
-    <% end %>
-  <% end %>
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
