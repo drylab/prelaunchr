@@ -70,10 +70,11 @@ class UsersController < ApplicationController
     address = request.env['HTTP_X_FORWARDED_FOR'] || request.env['HTTP_X_REAL_IP'] || request.env['REMOTE_ADDR']
 
     return if address.nil?
-    geo_data = Geocoder.search(address).first
-    if geo_data.data["country_code"] == "NO"
-      return redirect_to root_path, alert: "Not available in Norway"
-    end
+    # GEODOCING BLOCKING NORWAYS IP ADDRESSES
+    # geo_data = Geocoder.search(address).first
+    # if geo_data.data["country_code"] == "NO"
+    #   return redirect_to root_path, alert: "Not available in Norway"
+    # end
 
     current_ip = IpAddress.find_by_address(address)
     if current_ip.nil?
