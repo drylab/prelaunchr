@@ -76,7 +76,7 @@ body {
 #home .hero .small {
   color: #fff;
   font-size: 15px;
-  line-height: 15px;
+  line-height: 1.5em;
   position: relative;
   z-index: 2;
   letter-spacing: 1px;
@@ -100,13 +100,13 @@ body {
 #home .form-wrap .logo {
   line-height: 29px;
   background: image-url("refer/logo.png") 0 0 no-repeat;
-  background-size: 30px 29px;
+  background-size: 23px 29px;
   height: 30px;
   width: 300px;
   position: absolute;
   left: 20px;
   color: #fff;
-  padding: 0px 0 0 45px;
+  padding: 0px 0 0 30px;
   font-size: 14px;
 }
 
@@ -264,7 +264,7 @@ body {
 }
 
 .brandon {
-  font-family: "AvantGarde", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 }
 
 #refer {
@@ -307,9 +307,9 @@ body {
   margin-right: 14px;
   letter-spacing: 1px;
   background: image-url("refer/logo.png") 0 0 no-repeat;
-  background-size: 30px 29px;
+  background-size: 23px 29px;
   height: 29px;
-  width: 50px;
+  width: 36px;
   margin: 10px 0 0 15px;
 }
 
