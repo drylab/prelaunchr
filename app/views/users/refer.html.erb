@@ -12,14 +12,15 @@
 
 <div class="hero">
   <div class="flex-cont">
-    <div class="flex-item">
-      <p class="title">Film-making is <br /> evolving!</p>
+    <div class="flex-item share-wrap">
+      <p class="title">Thank you<br />for signing up!</p>
+      <p class="subtitle brandon">It means a lot to us.</p>
     </div>
     <div class="flex-item">
       <div class="share-wrap">
-        <p class="why brandon">Don't leave your friends behind</p>
-        <p class="title brandon">INVITE FRIENDS &<br>Earn free use</p>
-        <p class="subtitle brandon">Share this unique link via e-mail, Facebook,<br>handwritten note or other preferred media, and get $100 for every 5 friends who signs up, to use on your first purchase*.</p>
+        <p class="why brandon">Don't leave your film making friends behind</p>
+        <p class="title brandon">Share early access</p>
+        <p class="subtitle brandon">Share the link via e-mail, Snap, Insta, handwritten note, or other preferred media. Press an icon or copy and paste the unique link, then track your influence.</p>
         <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
         <% twitter_message = "#Film-making is evolving. Excited for @drylab 3 to launch." %>
         <div class="social-links">
@@ -71,7 +72,7 @@
     <% else %>
       <p class="place brandon"><span><%= referrals_count %></span> <%= words %> signed up</p>
     <% end %>
-    <p class="callout brandon">So many people to tell, so little time</p>
+    <p class="callout brandon">So many friends, so little time</p>
     <ul class="products clearfix">
       <% stops.each do |stop| %>
         <li class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
