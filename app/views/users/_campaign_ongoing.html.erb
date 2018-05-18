@@ -1,6 +1,11 @@
 <div class="key"></div>
 <p class="byline brandon">Be the first to know</p>
-<p class="logo">Stay Curious. Create Better.</p>
+<div class='logo-image'>
+  <%= image_tag('refer/logo') %>
+</div>
+<p class="logo">
+  Stay Curious. Create Better.
+</p>
 <%= form_for @user, :url => { :action => "create" } do |f| %>
   <%= f.text_field :email, :placeholder => "Enter e-mail", :class => "email brandon" %>
   <input class="submit brandon" name="commit" type="submit" value="Step Inside" />

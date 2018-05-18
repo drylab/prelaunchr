@@ -99,8 +99,8 @@ body {
 
 #home .form-wrap .logo {
   line-height: 29px;
-  background: image-url("refer/logo.png") 0 0 no-repeat;
-  background-size: 30px 29px;
+  // background: image-url("refer/logo.png") 0 0 no-repeat;
+  // background-size: 30px 29px;
   height: 30px;
   width: 300px;
   position: absolute;
@@ -108,6 +108,13 @@ body {
   color: #fff;
   padding: 0px 0 0 45px;
   font-size: 14px;
+}
+
+#home .form-wrap .logo-image img {
+  max-width: 30px;
+  position: absolute;
+  left: 20px;
+  margin-top: -4px;
 }
 
 #home .form-wrap .byline {
@@ -693,6 +700,10 @@ body {
   }
 
   #home .form-wrap .logo {
+    display: none;
+  }
+
+  #home .form-wrap .logo-image {
     display: none;
   }
 

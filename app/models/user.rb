@@ -22,57 +22,57 @@ class User < ActiveRecord::Base
       'prize' => "$0"
     },
     {
-      'count' => 5,
+      'count' => 2,
       'html' => 'Junior',
       'class' => 'one',
       'description' => "Off to a good start! Keep on going.",
       'prize' => "$100"
     },
     {
-      'count' => 10,
-      'html' => 'Employee of the month',
+      'count' => 4,
+      'html' => 'Employee of the Month',
       'class' => 'two',
       'description' => "Your mama would be proud.",
       'prize' => "$200"
     },
     {
-      'count' => 15,
-      'html' => 'Expert networker',
+      'count' => 6,
+      'html' => 'Expert Networker',
       'class' => 'three',
-      'description' => "Do you really know all of these people?",
+      'description' => "Wow! You're on fire!!",
       'prize' => "$300"
     },
     {
-      'count' => 20,
+      'count' => 8,
       'html' => 'Honorary Citizen',
       'class' => 'four',
-      'description' => "Wow! You're on fire!!",
+      'description' => "*ERROR* <br> Failed to come up with funny punch.",
       'prize' => "$400"
     },
     {
-      'count' => 25,
+      'count' => 10,
       'html' => 'Super Ninja',
       'class' => 'five',
       'description' => "Are you even human?",
       'prize' => "$500"
     },
     {
-      'count' => 30,
+      'count' => 12,
       'html' => 'Prodigy',
       'class' => 'six',
-      'description' => "*ERROR* <br> Failed to come up with funny punch.",
+      'description' => "Do you really know all of these people? Impressive!",
       'prize' => "$600"
     },
     {
-      'count' => 35,
+      'count' => 14,
       'html' => 'Emperor of Networking',
       'class' => 'seven',
-      'description' => "Words are not enough. We bow to you.",
+      'description' => "Words are not enough. We bow before you.",
       'prize' => "$700"
     },
     {
-      'count' => 40,
-      'html' => 'Master of the universe',
+      'count' => 16,
+      'html' => 'Master of the Universe',
       'class' => 'eight',
       'description' => "Gordon's alive!",
       'prize' => "$800"
