@@ -274,6 +274,21 @@ body {
   font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 }
 
+.policy {
+  color: white;
+  font-size: 10px;
+  text-align: center;
+}
+
+.policy a {
+  color: #ffa433;
+}
+
+.policy a:hover {
+  color: #ffaf4d;
+  text-decoration: none;
+}
+
 #refer {
   background: #fff;
 }
@@ -659,7 +674,7 @@ body {
   }
 
   #home .hero {
-    min-height: 540px;
+    min-height: 670px;
   }
 
   #home .hero .large {
@@ -688,7 +703,7 @@ body {
   }
 
   #home .hero {
-    min-height: 600px;
+    min-height: 680px;
   }
 
   #home .hero .flex-cont {
@@ -725,7 +740,7 @@ body {
   }
 
   #home .hero {
-    min-height: 500px;
+    min-height: 640px;
   }
 
   #home .form-wrap {
