@@ -68,7 +68,7 @@ Prelaunchr::Application.configure do
     authentication: 'plain',
     user_name: ENV['SMTP_USERNAME'],
     password: ENV['SMTP_PASSWORD'],
-    enable_starttls_auto: false
+    enable_starttls_auto: ENV['SMTP_ENABLE_STARTTLS_AUTO']
   }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default_url_options = { :host => ENV['DEFAULT_MAILER_HOST'] }
