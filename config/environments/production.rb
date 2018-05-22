@@ -60,6 +60,17 @@ Prelaunchr::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: ENV['SMTP_ADDRESS'],
+    port: ENV['SMTP_PORT'],
+    domain: ENV['SMTP_DOMAIN'],
+    authentication: 'plain',
+    user_name: ENV['SMTP_USERNAME'],
+    password: ENV['SMTP_PASSWORD'],
+    enable_starttls_auto: false
+  }
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.default_url_options = { :host => ENV['DEFAULT_MAILER_HOST'] }
 
   # Log the query plan for queries taking more than this (works
