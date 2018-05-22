@@ -7,15 +7,15 @@
 
 <p>
   Your referral link
-  <%= link_to "#{CGI::escape(root_url)}?ref=#{@user.referral_code}", "#{Rails.application.config.action_mailer.default_url_options}?ref=#{@user.referral_code}", target: '_blank' %>
+  <%= link_to "#{root_url}?ref=#{@user.referral_code}", "#{root_url}?ref=#{@user.referral_code}", target: '_blank' %>
 </p>
 
 <p>
   Share the news:
   </br>
-  <%= link_to "Facebook", "https://www.facebook.com/sharer/sharer.php?u=#{CGI::escape(root_url)}?ref=#{CGI::escape(@user.referral_code)}", target: '_blank' %>
+  <%= link_to "Facebook", "https://www.facebook.com/sharer/sharer.php?u=#{root_url}?ref=#{@user.referral_code}", target: '_blank' %>
   </br>
-  <%= link_to "Twitter", "https://twitter.com/share?url=#{CGI::escape(root_url)}?ref=#{CGI::escape(@user.referral_code)}&text=#{CGI::escape(@twitter_message)}", target: '_blank' %>
+  <%= link_to "Twitter", "https://twitter.com/share?url=#{root_url}?ref=#{@user.referral_code}&text=#{CGI::escape(@twitter_message)}", target: '_blank' %>
   </br>
-  <%= link_to "LinkedIn", "https://www.linkedin.com/shareArticle?mini=true&url=#{CGI::escape(root_url)}?ref=#{CGI::escape(@user.referral_code)}", target: '_blank' %>
+  <%= link_to "LinkedIn", "https://www.linkedin.com/shareArticle?mini=true&url=#{root_url}?ref=#{@user.referral_code}", target: '_blank' %>
 </p>
