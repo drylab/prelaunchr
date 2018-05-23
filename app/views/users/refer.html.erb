@@ -26,7 +26,7 @@
         <div class="social-links">
           <a href="https://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Drylab" class="fb" target="_blank"></a>
           <a href="https://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"></a>
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=<%= root_url %>?ref=<%= @user.referral_code %>" title="Drylab 3 is coming" class="linkedin" target="_blank"></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=<%= root_url %>?ref=<%= @user.referral_code %>" title="<%= CGI::escape(twitter_message) %>" class="linkedin" target="_blank"></a>
         </div>
       </div>
     </div>
