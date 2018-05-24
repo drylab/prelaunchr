@@ -18,13 +18,15 @@ namespace :deploy do
   desc 'Restart application'
   task :stop do
     on roles(:app), in: :sequence, wait: 10 do
-      execute 'sudo unicornctl stop'
+      execute 'sudo systemctl stop drylab-prelaunchr-unicorn.service'
+      execute 'sudo systemctl stop drylab-prelaunchr-jobs.service'
     end
   end
 
   task :start do
     on roles(:app), in: :sequence, wait: 10 do
-      execute 'sudo unicornctl start'
+      execute 'sudo systemctl start drylab-prelaunchr-unicorn.service'
+      execute 'sudo systemctl start drylab-prelaunchr-jobs.service'
     end
   end
 
